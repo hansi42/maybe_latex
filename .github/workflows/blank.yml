@@ -1,11 +1,24 @@
 name: Build LaTeX document
-on: [push]
+
+on:
+  push:
+    branches: [ main ]
+    paths-ignore:
+      - "*.pdf"   # prevents infinite loops
+
 jobs:
   build_latex:
     runs-on: ubuntu-latest
+
+    permissions:
+      contents: write   # REQUIRED for pushing commits
+
     steps:
       - name: Set up Git repository
         uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v4
         with:
@@ -13,8 +26,17 @@ jobs:
           latexmk_use_lualatex: false
           latexmk_shell_escape: true
           extra_system_packages: biber
-      - name: Upload PDF file
-        uses: actions/upload-artifact@v6
-        with:
-          name: PDF
-          path: main.pdf
+
+      - name: Commit PDF if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add main.pdf
+
+          if git diff --cached --quiet; then
+            echo "No changes in PDF"
+          else
+            git commit -m "Auto-build PDF"
+            git push
+          fi
