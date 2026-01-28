@@ -205,12 +205,12 @@ In practice, delayed local planning instruments, administrative complexity, and 
 
 
 \subsection{Data}\label{data}
-We use the \href{https://land.copernicus.eu/en/map-viewer?product=d06a27c960dd43dea8d33400aa04556c}{Imperviousny
+We use the \href{https://land.copernicus.eu/en/map-viewer?product=d06a27c960dd43dea8d33400aa04556c}{Impervious
 Density} to detect the build up areas from 2018 and 2006. This can be used to see how much
 percentage of the islands is sealed. This dataset has a raster size of 10m for 2018 and 20m for 2006.\\
 To research the influence of topography and buildup areas we use the
 \href{https://earthexplorer.usgs.gov}{SRTM DEM} dataset. The dataset delivers the mean elevation of a raster of 30mx30m. \\\\
-As described in \ref{meth}, we have to upsample the Digital Elevation Model to 20m raster size and downsample the 10m impervious density data to 20m.
+As described in Section \ref{meth}, we have to upsample the Digital Elevation Model to 20m raster size and downsample the 10m impervious density data to 20m.
 \subsection{Methodology}\label{meth}
 We want to compare build-up areas of the Islands Ischia and Lesvos of different times.\\
 In the first step, we calculate the share of buildup areas of the whole island surface. We assume, that every raster with a value $\geq$ 1 is buildup. The amount of rasters with value $\geq$ 1 divided by the total amount of rasters of the islands is the buildup ratio.\\\\
@@ -287,17 +287,17 @@ In Figure \ref{fig:map_buildup_elevation} the buildup-area data is combined with
 \end{figure*}
 
 
-In the next step, the gradient map is created. For visual representation, a frequency polygon is created by the method described in \ref{meth}.  The frequency polygon is shown in Figure \ref{fig:plots_buildup}. The upper row are the plots for the counts of the different Islands. The lower row are the shares of the total amounts. The left column represents Ischia while the right column represents Lesvos. The gradients magnitudes were also divided in the steps described in \ref{meth}. Those are represented by the blue shadowing. \\\\
+In the next step, the gradient map is created. For visual representation, a frequency polygon is created by the method described in Section \ref{meth}.  The frequency polygon is shown in Figure \ref{fig:plots_buildup}. The upper row are the plots for the counts of the different Islands. The lower row are the shares of the total amounts. The left column represents Ischia while the right column represents Lesvos. The gradients magnitudes were also divided in the steps described in Section \ref{meth}. Those are represented by the blue shadowing. \\\\
 The top left plot shows that in 2018, compared to 2006 a lot more buildup existed on Ischia. This can be concluded because the "difference" line has always positive values. This line represents the values of 2006 subtracted from the values of 2018.  \\The top right plot shows that the counts of rasters in different magnitudes barely changed. The "difference" line has, compared to Ischia, really low values. This is expected, since the results of Table \ref{tab:perc_buildup} didn't show a big change of buildup area for Lesvos. \\
-The plots of Figure \ref{fig:plots_buildup} are divided in the steps described in \ref{meth}. The numeric values are shown in Table \ref{tab:results}.\\\\
+The plots of Figure \ref{fig:plots_buildup} are divided in the steps described in Section \ref{meth}. The numeric values are shown in Table \ref{tab:results}.\\\\
 The second row, represents the share of the total buildup areas of the different magnitudes. The plot on the lower left side shows no significant change of the 2006 and 2018 line for Lesvos. \\
 The plot on the lower right side shows the share for Ischia. Hereby can be seen, that in the interval [0,6], the share of buildup area of 2006 is above the one from 2018. From [7,25] the 2018 it is above the 2006 share. After that, the 2006 shares are higher than the 2018 shares. \\
-This can be interpreted as, that more buildup happened in the gradient magnitudes in the interval [7,25] as in the areas with other gradient magnitude. \\This is also stated in Table \ref{tab:results}. It can be seen, that most of the buildup change happened in the classes $6\le$x$\leq$9 and higher for Ischia. This is also visible in \ref{fig:map_buildup_class}. The buildup areas of 2006 and 2018 are shown. For Ischia, a lot of  areas which are coloured depending on the $6\le$x$\leq$9 classification on higher were transformed to buildup areas in 2018. 
+This can be interpreted as, that more buildup happened in the gradient magnitudes in the interval [7,25] as in the areas with other gradient magnitude. \\This is also stated in Table \ref{tab:results}. It can be seen, that most of the buildup change happened in the classes $6\le$x$\leq$9 and higher for Ischia. This is also visible in Figure \ref{fig:map_buildup_class}. The buildup areas of 2006 and 2018 are shown. For Ischia, a lot of  areas which are coloured depending on the $6\le$x$\leq$9 classification on higher were transformed to buildup areas in 2018. 
 \\\\
-The results we gained could be representing different influences on the islands: Like described in Section \ref{sec_I} and \ref{sec_L}, Ischia and Lesvos are influenced by different socio-economic factors. Ischia was in 2006 already quite densely, compared to Lesvos, buildup. The increase of 64.51\% in buildup area did mainly happen on gradient magnitude in the interval [7,25]. The areas which were builtup in-between 2006 and 2018 did therefore mainly happen in this gradient interval. In comparison, on Lesvos did the buildup area not significantly differ from the buildup area from before 2006.\\ Nevertheless,  areas in the higher slopes got more popular for buildup on Ischia. Reasons could be, that the more flat areas are already densely populated, that the new buildups are more regularly happening at more steep slopes. As described in \textbf{Add ref}, the buildup on Ischia is driven on touristic developement and a economic wealth growth since its located close to Naples. Also, the spatial planning framework legalizes unauthorized buildups, which could be a reason for a higher buildup rate.\\\\
-On the other side, Lesvos does not show that strong buildup rates in the time period of 2006 and 2018. Lesvos is, compared to Ischia, way further from the mainland of Greece and is harder to reach. This could be a reason for lower economic grow and tourism rates, as stated in \ref{sec_L}
+The results we gained could be representing different influences on the islands: Like described in Section \ref{sec_I} and \ref{sec_L}, Ischia and Lesvos are influenced by different socio-economic factors. Ischia was in 2006 already quite densely, compared to Lesvos, buildup. The increase of 64.51\% in buildup area did mainly happen on gradient magnitude in the interval [7,25]. The areas which were builtup in-between 2006 and 2018 did therefore mainly happen in this gradient interval. In comparison, on Lesvos did the buildup area not significantly differ from the buildup area from before 2006.\\ Nevertheless,  areas in the higher slopes got more popular for buildup on Ischia. Reasons could be, that the more flat areas are already densely populated, that the new buildups are more regularly happening at more steep slopes. As described in Section \ref{sec_I}, the buildup on Ischia is driven on touristic developement and a economic wealth growth since its located close to Naples. Also, the spatial planning framework legalizes unauthorized buildups, which could be a reason for a higher buildup rate.\\\\
+On the other side, Lesvos does not show that strong buildup rates in the time period of 2006 and 2018. Lesvos is, compared to Ischia, way further from the mainland of Greece and is harder to reach. This could be a reason for lower economic grow and tourism rates, as stated in Section \ref{sec_L}
 \\\\
-As described in \ref{sec_I}, 
+As described in Section \ref{sec_I}, 
 There could have several reasons: Ischia was 2006 already quite densely populated how Table \ref{tab:perc_buildup} and Figure \ref{fig:map_buildup_elevation} 
 \\
 
@@ -315,12 +315,6 @@ There could have several reasons: Ischia was 2006 already quite densely populate
 \end{figure*}
 
 
-\begin{figure*}
-\adjustbox{center}{
-\includegraphics[scale=0.5]{"plots/buildup_scope_class_4d.png"}}
-\caption{Buildup area with slope classification}
-\label{fig:map_buildup_class}
-\end{figure*}
 
 
 
@@ -334,6 +328,13 @@ Nevertheless, the research could not be representative because of different issu
 The data we used for the buildup, see Section \ref{data}, is with a resolution of 20m and 10m quite imprecise. To detect every single buildup in the area a higher resolution is necessary. Also, the sampling between different resolution caused imprecision. By comparing the initial data, with which we computed the buildup area in Table \ref{tab:perc_buildup} with the data results of Table \ref{tab:results} and Figure \ref{fig:plots_buildup}, we calculated an error of 10\%. \\\\
 The island areas are different by factor ~35 and Ischia is, in contrast to Lesvos, incorporated in the metropolitan region of Naples. Therefore, comparing the buildup changes are not meaningful. \\A more valid measure could have been dividing the buildup area by inhabitants or area of the islands. This would have resulted in more comparable values.\\\\
  Nevertheless, the buildup area relating to different physical conditions and socio-economic influences could be researched and the difference of the two islands over the time period of 2006 to 2018 presented. Even if the data and the selection of islands is not meaningful to make a representative statement, the differences of the islands could still be presented in a ways to describe the different buildup development of Ischia and Lesvos. 
+ 
+\begin{figure*}
+\adjustbox{center}{
+\includegraphics[scale=0.5]{"plots/buildup_scope_class_4d.png"}}
+\caption{Buildup area with slope classification}
+\label{fig:map_buildup_class}
+\end{figure*}
 
 %%===========================================================================================%%
 %% If you are submitting to one of the Nature Portfolio journals, using the eJP submission   %%
