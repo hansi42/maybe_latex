@@ -1,0 +1,354 @@
+%Version 3.1 December 2024
+% See section 11 of the User Manual for version history
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                                                 %%
+%% Please do not use \input{...} to include other tex files.       %%
+%% Submit your LaTeX manuscript as one .tex document.              %%
+%%                                                                 %%
+%% All additional figures and files should be attached             %%
+%% separately and not embedded in the \TeX\ document itself.       %%
+%%                                                                 %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%\documentclass[referee,sn-basic]{sn-jnl}% referee option is meant for double line spacing
+
+%%=======================================================%%
+%% to print line numbers in the margin use lineno option %%
+%%=======================================================%%
+
+%%\documentclass[lineno,pdflatex,sn-basic]{sn-jnl}% Basic Springer Nature Reference Style/Chemistry Reference Style
+
+%%=========================================================================================%%
+%% the documentclass is set to pdflatex as default. You can delete it if not appropriate.  %%
+%%=========================================================================================%%
+
+%%\documentclass[sn-basic]{sn-jnl}% Basic Springer Nature Reference Style/Chemistry Reference Style
+
+%%Note: the following reference styles support Namedate and Numbered referencing. By default the style follows the most common style. To switch between the options you can add or remove Numbered in the optional parenthesis. 
+%%The option is available for: sn-basic.bst, sn-chicago.bst%  
+ 
+%%\documentclass[pdflatex,sn-nature]{sn-jnl}% Style for submissions to Nature Portfolio journals
+%%\documentclass[pdflatex,sn-basic]{sn-jnl}% Basic Springer Nature Reference Style/Chemistry Reference Style
+%\documentclass[pdflatex,sn-mathphys-num]{sn-jnl}% Math and Physical Sciences Numbered Reference Style
+\documentclass[10pt, twocolumn, twoside]{article}
+%%\documentclass[pdflatex,sn-mathphys-ay]{sn-jnl}% Math and Physical Sciences Author Year Reference Style
+%%\documentclass[pdflatex,sn-aps]{sn-jnl}% American Physical Society (APS) Reference Style
+%%\documentclass[pdflatex,sn-vancouver-num]{sn-jnl}% Vancouver Numbered Reference Style
+%%\documentclass[pdflatex,sn-vancouver-ay]{sn-jnl}% Vancouver Author Year Reference Style
+%%\documentclass[pdflatex,sn-apa]{sn-jnl}% APA Reference Style
+%%\documentclass[pdflatex,sn-chicago]{sn-jnl}% Chicago-based Humanities Reference Style
+
+%%%% Standard Packages
+%%<additional latex packages if required can be included here>
+
+\usepackage{graphicx}%
+\usepackage{multirow}%
+\usepackage{amsmath,amssymb,amsfonts}%
+\usepackage{amsthm}%
+\usepackage{mathrsfs}
+\usepackage{dblfloatfix}
+\usepackage{booktabs}   % Professional rules%
+\usepackage[title]{appendix}%
+%\usepackage{xcolor}%
+\usepackage{textcomp}%
+\usepackage{manyfoot}%
+\usepackage{booktabs}%
+\usepackage{algorithm}%
+\usepackage{algorithmicx}%
+\usepackage{algpseudocode}%
+\usepackage{listings}%
+\usepackage{subfig}
+\usepackage{adjustbox}
+\usepackage{authblk}
+\usepackage{hyperref}
+\usepackage[autostyle]{csquotes}
+\usepackage{fancyhdr}      % Header/footer
+\usepackage[
+    backend=biber,
+    style=numeric,
+    sortlocale=de_DE,
+    natbib=true,
+    url=false, 
+    doi=true,
+    eprint=false
+]{biblatex}
+\addbibresource{sn-bibliography.bib}
+\usepackage{caption}
+
+\usepackage[table]{xcolor}%%%%
+
+%%%%%=============================================================================%%%%
+%%%%  Remarks: This template is provided to aid authors with the preparation
+%%%%  of original research articles intended for submission to journals published 
+%%%%  by Springer Nature. The guidance has been prepared in partnership with 
+%%%%  production teams to conform to Springer Nature technical requirements. 
+%%%%  Editorial and presentation requirements differ among journal portfolios and 
+%%%%  research disciplines. You may find sections in this template are irrelevant 
+%%%%  to your work and are empowered to omit any such section if allowed by the 
+%%%%  journal you intend to submit to. The submission guidelines and policies 
+%%%%  of the journal take precedence. A detailed User Manual is available in the 
+%%%%  template package for technical guidance.
+%%%%%=============================================================================%%%%
+
+%% as per the requirement new theorem styles can be included as shown below
+\pagestyle{fancy}
+\fancyhf{}
+%\fancyhead[EC]{Comparision of Is	lands Lesvos and Ischia}
+\fancyhead[RO]{University of the Aegean}
+\fancyhead[LE]{Klimmek, Totti}
+\fancyhead[RE, LO]{\thepage}
+\setlength{\headheight}{14pt}
+
+
+
+\date{\today}
+
+%%\unnumbered% uncomment this for unnumbered level heads
+
+\title{\textbf{Spatial Planning Project: \\Comparision of Islands Lesvos and Ischia}}
+
+\author{Hannes Klimmek, Giacomo Totti\\University of the Aegean}%\email{jg15xiqi@studserv.uni-leipzig.de}
+
+\begin{document}
+
+
+%%=============================================================%%
+%% GivenName	-> \fnm{Joergen W.}
+%% Particle	-> \spfx{van der} -> surname prefix
+%% FamilyName	-> \sur{Ploeg}
+%% Suffix	-> \sfx{IV}
+%% \author*[1,2]{\fnm{Joergen W.} \spfx{van der} \sur{Ploeg} 
+%%  \sfx{IV}}\email{iauthor@gmail.com}
+%%=============================================================%%
+
+
+%author[2]{Giacomo Totti}%\email{giacomo.totti@edu.unito.it}
+
+
+
+%%==================================%%
+%% Sample for unstructured abstract %%
+%%==================================%%
+
+
+%%================================%%
+%% Sample for structured abstract %%
+%%================================%%
+
+% \abstract{\textbf{Purpose:} The abstract serves both as a general introduction to the topic and as a brief, non-technical summary of the main results and their implications. The abstract must not include subheadings (unless expressly permitted in the journal's Instructions to Authors), equations or citations. As a guide the abstract should not exceed 200 words. Most journals do not set a hard limit however authors are advised to check the author instructions for the journal they are submitting to.
+% 
+% \textbf{Methods:} The abstract serves both as a general introduction to the topic and as a brief, non-technical summary of the main results and their implications. The abstract must not include subheadings (unless expressly permitted in the journal's Instructions to Authors), equations or citations. As a guide the abstract should not exceed 200 words. Most journals do not set a hard limit however authors are advised to check the author instructions for the journal they are submitting to.
+% 
+% \textbf{Results:} The abstract serves both as a general introduction to the topic and as a brief, non-technical summary of the main results and their implications. The abstract must not include subheadings (unless expressly permitted in the journal's Instructions to Authors), equations or citations. As a guide the abstract should not exceed 200 words. Most journals do not set a hard limit however authors are advised to check the author instructions for the journal they are submitting to.
+% 
+% \textbf{Conclusion:} The abstract serves both as a general introduction to the topic and as a brief, non-technical summary of the main results and their implications. The abstract must not include subheadings (unless expressly permitted in the journal's Instructions to Authors), equations or citations. As a guide the abstract should not exceed 200 words. Most journals do not set a hard limit however authors are advised to check the author instructions for the journal they are submitting to.}
+
+
+%%\pacs[JEL Classification]{D8, H51}
+
+%%\pacs[MSC Classification]{35A01, 65L10, 65L12, 65L20, 65L70}
+
+\maketitle
+
+\section{Introduction}\label{sec1}
+The spatial structure of island settlements is strongly influenced by geomorphological constraints and planning frameworks. For these reasons, the aim of this essay is to compare Ischia and Lesvos in order to examine how both differing physical conditions and planning law framework shape built-up patterns under unequal spatial scales, in the context of Mediterranean-insular conditions.\\
+Lesvos is circa 35 times bigger than Ischia since the two islands are respectively 46,3 km2 and 1630 km2. This aspect could lead us to think that these islands are incomparable for a matter of size, which influences both spatial planning and economic activities that could take place, but there are many variables that bring together these islands, starting from their geomorphology. Both are volcanic islands placed in the proximity of the mainland with earthquake risks (as the earthquakes they both experienced 2017 underline), Lesvos for being between tectonic plateaus and Ischia for being in the area of Campi Flegrei volcanic activity. They also share severe flooding and landslides risks exacerbated by climate change’s extreme weather events, which exposes settlements placed in susceptible areas at risk.\\
+Thereafter the essay will describe the socioeconomic frameworks of both islands in order to contextualize the distribution of builded up area in a broader discourse that goes beyond physical traits of the islands. In doing that the essay will first analyze the main economic reasons related to built-up area expansion and then pointing out both Italian and Greek spatial law frameworks.   \\
+Subsequently, using spatial analysis datasets the essay will visualize with different maps the differences between the islands. We will compare impervious density data from 2006 and 2018. We will make statements about the different buildup ratios. Besides that, we will research the relation of impervious areas relating to slope.\\ 
+We will analyze the results and evaluate the influence of socioeconomic influence on the development of buildup area changes
+\section{Materials}\label{sec2}
+
+\subsection{Ischia}\label{sec_I}
+\subsubsection{Geomorphological and physical traits}
+The island of Ischia is a volcanic island located in the Tyrrhenian Sea, at the north-western end of the Gulf of Naples, southern Italy. Together with Procida and Capri, it forms part of the Phlegraean island system, which is closely linked to the broader Campanian volcanic district. Ischia has long attracted scientific interest due to its complex geological evolution, active tectono-volcanic processes, and distinctive geomorphology. The island represents a dynamic natural laboratory where volcanic activity, tectonic uplift, erosion, and human settlement interact within a relatively small spatial domain. Understanding Ischia’s physical characteristics is therefore essential for interpreting its natural hazards, landscape evolution, and environmental vulnerability. \\
+Ischia has a total surface area of approximately 46 km², making it the largest island in the Gulf of Naples. Despite its limited spatial extent, the island exhibits remarkable geological and geomorphological diversity, with sharp contrasts between mountainous interiors and densely urbanized coastal zones. The island has formed through a long and complex history of eruptions spanning several hundred thousand years, since it is the summit of a volcanic system that rises more than 1,000 m from the seabed and reaches a height of 787 m above sea level \cite{ingv}. The highest point is represented by the tectonic uplift of Mount Epomeo, which consists largely of green tuff and represents a resurgent block rather than a classic volcanic cone. Although no historical eruptions have occurred in recent centuries, the island remains part of an active volcanic system, as evidenced by fumaroles, thermal springs, and ongoing ground deformation \cite{ingv}. \\
+For its volcanic origin, the elevation of Ischia’s reliefs, ranges from sea level along the coast to this central high point, producing steep altitudinal gradients over short horizontal distances. The interior of the island is characterized by rugged terrain, while lower elevations are more common along the coastal margins and in alluvial or marine terraces. For this reason, slope distribution on Ischia reflects the combined effects of volcanic construction, tectonic deformation, and erosion. Steep slopes are prevalent in the central and northern sectors of the island, particularly around Mount Epomeo and the Casamicciola–Serrara Fontana area. Moderate to gentle slopes occur toward the coastal plains and terraced hillsides, many of which have been historically modified for agriculture \cite{Vezzoli1988Ischia}. The prevalence of steep slopes increases susceptibility to mass-movement processes, especially during intense rainfall events, for this reason, the island is also prone to flooding and landslides, especially following intense or prolonged rainfall. In recent years, these extreme events are starting to occur more frequently, as the flooding of September 2025 shows \cite{ansa}. These events could also have some disastrous outcomes, one example is the landslides caused by Ischia’s flooding happened between 25 and 26 of November 2022 which caused the death of 12 people \cite{ISPRA2022Ischia}. Steep slopes, volcanic soils with variable permeability, and extensive urbanization increase surface runoff and slope instability, making hydrogeological hazards a critical concern for risk management and land-use planning on the island. 
+Nevertheless, the biggest threat to the island has always been earthquake risk closely linked to its complex volcanic and tectonic setting. The seismicity is primarily driven by volcanic and hydrothermal processes rather than by large regional faults. Historical records show that even moderate-magnitude earthquakes have caused severe damage on the island, largely because of their very shallow depth and proximity to densely built areas, one among the other is represented by the Casamicciola earthquake of 1883. The town is heavily subjected to natural hazards caused by volcanic activity in the subsurface also nowadays; the 2017 Earthquake of Casamicciola, for example, resulted in widespread destruction even if the magnitude was moderate (M. 3,9), illustrating the disproportionate impact of local seismic events, since other cities in the island experienced limited damages or even got untouched \cite{DeNatale2019Ischia}. 
+Lastly, Ischia coastline displays a highly heterogeneous morphology, shaped by volcanic activity, marine erosion, and sedimentary processes. Rocky cliffs and promontories dominate much of the shoreline, particularly along the southern and western coasts, where lava flows and pyroclastic deposits are directly exposed to wave action. In contrast, pocket beaches, sandy bays, and small coastal plains occur mainly along the northern and eastern coasts, where sediment accumulation and reduced wave energy allow beach development. Coastal morphology is further influenced by human interventions such as ports, breakwaters, and coastal defenses, since the urbanization of upper parts is more complex for the aforementioned geomorphological risks. Nevertheless, events such the previously mentioned 2022 flooding can expose even the coastal settlements and the limited flat lands in the island to landslides risk \cite{massaro}.  
+
+
+
+  
+\subsubsection{Spatial planning framework and built-up areas expansion
+}The contemporary building process in Ischia is the result of the interaction between strong development pressures, caused especially by tourism, and a spatial planning framework that has historically struggled to regulate growth in risk-prone environments.\\
+Ischia’s economy is heavily reliant on tourism, this has led to the concentration of builded-up areas along the coast and on lower slopes where accessibility and commercial value are highest. This coastal urbanization exacerbated by the proximity to the important touristic hotspot of Naples along with seasonal tourism, intensifies land consumption and encourages dense settlement patterns, often prioritizing short-term economic gains over long-term safety considerations \cite{land12051017} . At the same time, accessibility constraints (stemming from the island’s reliance on maritime connections and a narrow, steep internal road network) have further shaped where buildings are placed, reinforcing clustering in already congested and vulnerable areas. Tourism development in Ischia has also contributed to the conversion of agricultural land as visitors and tourism infrastructure increasingly dominate the local economy and landscape . Agricultural production has declined in favor of tourism‑related uses, with reports noting that historic viticultural land has been abandoned as tourism expanded and urbanization consumed rural plots, augmenting the geomorphological risks related to cementification \cite{Aveta2019Ischia}.
+These dynamics are embedded within a broader Italian planning culture characterized by fragmented, municipality-driven governance and limited coordination across scales. The first Italian regulation on spatial planning was Law 1150/1942 or Legge Urbanistica Nazionale, where spatial planning was centralized and urban focused. With the D.P.R. 616/1977 the spatial regulation planning got decentralized and transferred to the regional administrations. This has led local authorities to retain substantial discretion over land-use decisions, which has historically facilitated permissive development in coastal and hillside areas, even where seismic and hydrogeological hazards are well documented. Although national and regional regulations formally restrict construction on steep slopes and in protected or high-risk zones, enforcement has often been inconsistent. In Ischia, this regulatory weakness has contributed to the widespread presence of unlawful buildings (abusivismo edilizio), with unauthorized or non-compliant buildings frequently located in hazardous areas and lacking adequate structural standards.
+The persistence of such practices has been reinforced by the recurrent use of condono edilizio by several italian governments, which is the retroactive full-legalization of unauthorized buildings, usually applied without considering local planification, happened in 1985 (L. 47/1985), in 1994 (L. 724/1994), and in 2003 (L. 326/2003). This has weakened the deterrent effect of planning regulations being an institutional driver of vulnerability. As a result, population and economic assets are unevenly distributed, with high exposure in densely built coastal zones and on unstable slopes, including areas adjacent to protected land\cite{LeMonde2022Ischia}). This pattern of development has produced a built environment that is highly vulnerable to both seismic and extreme weather events, where risk is not solely a function of natural hazards but is deeply rooted in the institutional, economic, and cultural processes that have shaped land use and construction on the island.
+
+
+\subsection{Lesvos}\label{sec_L}
+\subsubsection{Geomorphological and physical traits 
+}
+Lesvos is located in the northeastern Aegean Sea, and lies on a subduction zone between the Anatolian and Aegean plates and it's the third-largest Greek island after Crete and Euboea, covering approximately 1,633 km², and displays a highly heterogeneous physical geography shaped by both volcanic and tectonic processes\cite{BritannicaGreekMythology}. The scale of the island supports both extensive rural landscapes and concentrated urban settlements. All together, the island’s landscape, settlement patterns, and exposure to seismic and hydro-meteorological risks are closely interconnected, reflecting long-term interactions between natural processes and human occupation.\\
+The island’s relief ranges from sea level to about 968 m both at Mount Lepetymnos, situated in the northern part of the island, and at Mount Olympos (967 m), situated in the central south area of the island in the proximity of the town of Agiasos \cite{BritannicaGreekMythology}. The mountainous interior alternates with hills, plateaus, and low-lying basins which has always played a key role in climatic differentiation, drainage patterns as long as historically driven settlement patterns. \\
+Built-up areas are primarily concentrated along the coast and within lowland basins, where access, agricultural potential, and maritime connectivity are greatest; however, urban expansion has increasingly extended onto surrounding slopes, particularly near major settlements such as Mytilene and along coastal corridors. Slope gradients vary widely across the island, with moderate to steep slopes dominating central and western sectors, where construction on inclined terrain often requires significant land modification. Therefore, these slope conditions contribute to increase susceptibility to landslides, and surface flooding, especially where vegetation covers has been altered with the purpose of creating new buildings such as in Mitilini where exceptional rains (exacerbated by the climate change) cause diffuse flooding, as for example the damages several habitations experienced in November 2025 hailstorm \cite{protema}. In these events, paved roads located in hilly sides and sloppy areas experienced rills due to their impermeability, causing problems on the vehicle movements with the consequent blockade of the road network.\\\\
+ Lesvos is characterized by a deeply indented coastline, including the gulfs of Kalloni and Gera, which penetrate deep into the island and create low-lying coastal environments. These two gulfs have favored dense coastal development but also expose settlements to flooding and coastal hazards, especially in Kalloni where the last flooding had taken place on 11 November 2025 \cite{tovima}. 
+Geologically, the island reflects a complex evolution combining extensive volcanic formations,especially in the west, where lava flows and pyroclastic deposits are prominent, creating the unique petrified forest. This area connected with the volcanic activity which has taken place 20 million years ago, is today an important UNESCO Global Geopark, linked with the foundation of the European Geopark networks. \cite{geosciences13100296} \\
+With tectonically deformed units associated with active fault systems in the eastern Aegean linked to the active Aegean–Anatolian plate boundary. One important piece of evidence is the Agia Paraskevi fault which is linked with the destructive earthquake of 1867 \cite{lesvosgeo}. 
+The proximity to the aforementioned active fault systems in the northeastern Aegean region creates the susceptibility to seismic events, even of moderate magnitude, which pose a severe threat to settlements, infrastructure, and cultural heritage, particularly where building stock is older or not designed to modern seismic standards. One major example of these aspect is what happened to Vrissa, a settlement situated in a moderate to low slopes area, almost entirely destroyed by the Mw 6.3 earthquake of 2017. The causes are linked to its proximity to the slip patch of the fault and for its ubication on a pile of alluvial sediments, which are characterized by lower density and rigidity compared to the underlying bedrock, causing seismic waves to slow down and amplify as they pass through these softer materials \cite{Kiratzi2018LesvosEQ}.
+Together, these physical characteristics and settlement patterns define Lesvos as an heterogeneous island landscape, where the spatial distribution of built-up areas on coastal zones and slopes plays a critical role in shaping overall vulnerability.
+
+\subsubsection{Spatial planning framework and built-up areas expansion
+}
+
+The contemporary building process on Lesvos Island reflects the interaction between its socio-economic structure, physical constraints, and the specific characteristics of the Greek spatial planning framework. Tourism pressure on the island has remained relatively moderate compared to other Aegean destinations, resulting in limited touristic-linked built-up area development during the years, having at the same time a high percentage of empty houses \cite{Kizos2017BuiltUpIslands} instead, construction has been concentrated around existing settlements, particularly coastal towns, especially Mitilini, the main centre of the island. At the same time, the presence of the University of the Aegean along with a vast NGO volunteer’s network related to the refugee camp has generated stable, year-round housing demand in Mytilene, reinforcing urban expansion beyond purely seasonal tourism needs. \\
+Built-up areas are primarily located in low-lying coastal zones and accessible basins, where transport connections, services, and employment opportunities are concentrated, contrary to mountainous interiors and remote rural areas which have experienced long-term demographic decline in contrast to Mytilini which has seen a tripling of the population from 1951 to 1991 \cite{KIZOS2006330}. Accessibility constraints linked to the island’s mountainous interior and radial road network have further reinforced this pattern, while housing growth has increasingly extended onto surrounding slopes at the urban fringes, particularly around Mytilene and secondary coastal settlements.
+This spatial development has occurred within an economic context still strongly shaped by agriculture, notably extensive olive cultivation, which has historically limited urban sprawl by preserving large areas of agricultural land, with the olive orchards occupying an estimated 28\% of Lesvos area, representing a defining feature of the islands landscape and economy \cite{DOUMA201665}. However, agricultural abandonment in some areas such as the eastern part of Lesvos has created changes related to the landscape, where the typical olive trees landscape is replaced with the Mediterranean-type forest. Lesvos is also considered an important hotspot for ecological tourism, since it contains extensive protected areas, represented by the previously mentioned Lesvos Geopark, wetlands, which formally restrict development \cite{Zagaria2018Lesvos} . While regional authorities have promoted programs for agritourism in order to diversify the agricultural economy on the inland part, it has failed to truly integrate activities within the cultivated landscape and associated traditional products .\\
+Assuming that in the island of Lesvos the increasing of built-up area is and has been mainly around the urban area of Mytiline, it is important to contextualize how spatial planning in Greece has struggled to contain urban expansion, with urban land increasing rapidly despite economic constraints and a general flat population growth \cite{Stathakis2024Urbanization}. The cause of this issue is related to a strong development coalition (including landowners, developers, and vested interest groups) that favors expansion, resists regulation and demanding platonic variant of spatial planning  along with a chronically weak and inefficient planning system that fails to implement effective containment policies or to internalize the external costs of sprawl.\\ 
+Although Greek spatial planning is formally centralized, with national frameworks governing land use, environmental protection, and seismic safety, established through legislation such as Law 1337/1983, Law 2508/1997, and successive laws regulating informal buildings, the implementation of these regulations has been uneven. For the previously mentioned reasons concerning urban development coalitions and a chronically weak planning system, during years regulatory laws such as Law 4014/2011, Law 4178/2013 and Law 4495/2017, which formalize unauthorized buildings, have been implemented. Nevertheless according to Stathakis and Baltas paper, we can denote that these laws present several criticities; while Law 4014/2011 was implemented especially to gain the partial legalization, regularization, and integration of existing unauthorized constructions into planning frameworks (requiring fees, registration, or partial compliance with building codes), both Law 4178/2013 and Law 4495/2017 have also the aim to  prevent future illegal building. Several critiques such as the OECD Territorial Review on regional policy in Greece \cite{oecd}, weaknesses in spatial planning enforcement have allowed a large stock of unauthorised buildings to persist, because there is often no effective permitting procedure ensuring compliance with land-use plans and penalties for violations are rarely enforced. In such a context, legislative arrangements that provide for periodic regularisation of informal construction (e.g., Laws 4178/2013 and 4495/2017) can reinforce cycles of informal development rather than deter it.\\
+In practice, delayed local planning instruments, administrative complexity, and periodic legalization schemes for unauthorized buildings have weakened enforcement. Consequently, the current built environment of Lesvos reflects a hybrid planning outcome, in which development is largely guided toward accessible coastal and low-slope areas but increasingly encroaches onto surrounding slopes, shaping a settlement pattern where exposure to seismic, landslide, and flooding risks is closely tied to institutional and planning processes rather than to physical geography alone.
+
+
+
+	
+
+
+\subsection{Data}\label{data}
+We use the \href{https://land.copernicus.eu/en/map-viewer?product=d06a27c960dd43dea8d33400aa04556c}{Imperviousny
+Density} to detect the build up areas from 2018 and 2006. This can be used to see how much
+percentage of the islands is sealed. This dataset has a raster size of 10m for 2018 and 20m for 2006.\\
+To research the influence of topography and buildup areas we use the
+\href{https://earthexplorer.usgs.gov}{SRTM DEM} dataset. The dataset delivers the mean elevation of a raster of 30mx30m. \\\\
+As described in \ref{meth}, we have to upsample the Digital Elevation Model to 20m raster size and downsample the 10m impervious density data to 20m.
+\subsection{Methodology}\label{meth}
+We want to compare build-up areas of the Islands Ischia and Lesvos of different times.\\
+In the first step, we calculate the share of buildup areas of the whole island surface. We assume, that every raster with a value $\geq$ 1 is buildup. The amount of rasters with value $\geq$ 1 divided by the total amount of rasters of the islands is the buildup ratio.\\\\
+In the next step, we have to bring the buildup data and and DRM data on a comparable scale. At first, we reproject the data to EPSG:3035. This converts the scale of the data to meters simplifies the sampling. After that, we convert the DRM data to 20m resolution and the 10m impervious data from 2018 to 20m. We decided for this sampling, because we assume that creating the gradient from the 30m DRM data would have been imprecise anyway. Also, since the elevation data is continuous, upsampling and interpolating the new created values would influence the outcome less than sampling with the discrete impervious density data. \\
+Besides that, by downsampling the 10m buildup data to 20m buildup data we might loose precision, but we're not creating data which might not be precise.  \\
+In the end, the DRM data should have 1.5 times the size of the initial data and the 10m buildup data should be 1/4 times the size of the initial data.
+\\\\
+To make statements about the slope, the gradient magnitude is calculated from the up-scaled data. Hereby,  the derivative in X and Y directions are calculated. The derivative is basically the elevation difference of each data point divided by the distance in longitude and latitude direction.  In the second step, the magnitude is calculated. The magnitude represents the absolute value of the x and y gradient at a given data point. This is sufficient, since we're only interesting in the value of the magnitude, not the direction e.g.\\
+The result is a gradient magnitude map. The gradient magnitude map represents the slopes. \\\\
+Out of the gradient map we create several plots, to compare the islands over time. \\
+For visual representation, a frequency polygon is used. Similar like for a histogram, the data is distributed to "bucket". The buckets represent the x-values. The different buckets are the different magnitudes. The y-values are represented by either the count of rasters with the corresponding magnitude, or by the share of the rasters of this magnitude of the total magnitude rasters.
+\\\\
+
+We divide the slope in different categories, that we can classify on what slope the buildup area is. Goal is, to enhance the readability and meaningfullness by classifying the data. We divide the data in 6 categories, less than 3\% elevation, more or equal than 3\% and less than 6\% elevation, more or equal than 6\% and less than 9\% elevation, more or equal than 9\% and less than 12\% elevation, more or equal than 12\% or less than 15\% elevation and everything higher.\\
+With this classification, we can calculate how much of the build up area is in which slope classification. \\\\
+For the creation of maps, the data was reprojected to EPSG:4326, that the scale is in degrees north and east.
+
+\begin{table*}[t]
+\adjustbox{center}{
+\begin{tabular}{ rc rrr c rrr  }
+\toprule
+ & &\multicolumn{3}{c}{Ischia}&& \multicolumn{3}{c}{Lesvos} \\\cmidrule{3-5} \cmidrule{7-9}
+ &&2006 & 2018&Change[\%]&&2006&2018&Change[\%]\\
+ \midrule
+
+Total area rasters&&118795&530429&&&4351944&17356022&\\
+Buildup area rasters&&16368&120238&&& 	41948&175650&\\
+Buildup share&&0.1378&0.2267&64.51&& 0.0096&0.0101&5.21\\
+\bottomrule
+
+
+  \hline
+\end{tabular}
+}
+\caption{Build Up Area}
+\label{tab:perc_buildup}
+\end{table*}
+
+\section{Results and discussion}\label{sec3}
+
+
+
+
+\begin{table*}[b]
+\adjustbox{center}{
+\begin{tabular}{ rcrrrcrrr  }
+\toprule
+ & &\multicolumn{3}{c}{Ischia}&& \multicolumn{3}{c}{Lesvos} \\\cmidrule{3-5} \cmidrule{7-9}
+
+&&2006& 2018& Change[\%]&& 2006& 2018& Change[\%]\\\midrule
+\rowcolor[HTML]{ffffff}x $\leq$ 3  & & 9948&17561& 76.52&&23378&24384&4.30\\
+
+\rowcolor[HTML]{e0ffff}$3\le$x$\leq$6& & 3020	&5683&84.67&&6334&6524&4.62\\
+\rowcolor[HTML]{b2ebf2}$6\le$x$\leq$9&&1561&3365& 113.59&&3060&3287&6.4\\
+\rowcolor[HTML]{80deea}$9\le$x$\leq$12&&837&1912&123.2&&1429&1597&8.08\\
+\rowcolor[HTML]{4fc3f7}$12\le$x$\leq$15&&371&896& 137.07&&672&715&8.36\\
+\rowcolor[HTML]{1565c0}$15\le$ x&&388&834& 130.4&&487&628&24.69\\\hline 
+ \bottomrule
+\end{tabular}
+}
+\caption{Raster Count of buildup area of slope class}
+\label{tab:results}
+\end{table*}
+
+After the application of the in Section \ref{meth} descripted approach we created different numerical and visual data.\\\\
+In Figure \ref{fig:map_buildup_elevation} the buildup-area data is combined with the elevation. On Ischia, the buildup areas are mainly around the mountain in the center and close to the coast. Also, it is quite densely populated, since the red points which represent the build up areas occupy a lot of space on the map. Even by bare eye it's visible, that the buildup increased significantly from 2006 to 2018, since in the 2018 plot the buildup areas are way denser than 2006. On Lesvos, the build-up areas are not as present as on Ischia, which can be interpreted as it's less dense build up, at least by total island area.  \\\\This can be verified by calculating, see Table \ref{tab:perc_buildup}. The results of Table \ref{tab:perc_buildup} show that Ischia has a higher share of buildup  than Lesvos. In 2018, 22.7\% of the Island was buildup. In Lesvos, the buildup 2018 was 1\%. Compared to 2006, the buildup ratio increased for Ischia by 64.51\%. It only changed a little on Lesvos compared to Ischia. 
+
+\begin{figure*}
+\adjustbox{center}{
+\includegraphics[scale=0.6]{"plots/plot_buildup_4d.png"}
+}
+\caption{Plots buildup at gradiant}
+\label{fig:plots_buildup}
+\end{figure*}
+
+
+In the next step, the gradient map is created. For visual representation, a frequency polygon is created by the method described in \ref{meth}.  The frequency polygon is shown in Figure \ref{fig:plots_buildup}. The upper row are the plots for the counts of the different Islands. The lower row are the shares of the total amounts. The left column represents Ischia while the right column represents Lesvos. The gradients magnitudes were also divided in the steps described in \ref{meth}. Those are represented by the blue shadowing. \\\\
+The top left plot shows that in 2018, compared to 2006 a lot more buildup existed on Ischia. This can be concluded because the "difference" line has always positive values. This line represents the values of 2006 subtracted from the values of 2018.  \\The top right plot shows that the counts of rasters in different magnitudes barely changed. The "difference" line has, compared to Ischia, really low values. This is expected, since the results of Table \ref{tab:perc_buildup} didn't show a big change of buildup area for Lesvos. \\
+The plots of Figure \ref{fig:plots_buildup} are divided in the steps described in \ref{meth}. The numeric values are shown in Table \ref{tab:results}.\\\\
+The second row, represents the share of the total buildup areas of the different magnitudes. The plot on the lower left side shows no significant change of the 2006 and 2018 line for Lesvos. \\
+The plot on the lower right side shows the share for Ischia. Hereby can be seen, that in the interval [0,6], the share of buildup area of 2006 is above the one from 2018. From [7,25] the 2018 it is above the 2006 share. After that, the 2006 shares are higher than the 2018 shares. \\
+This can be interpreted as, that more buildup happened in the gradient magnitudes in the interval [7,25] as in the areas with other gradient magnitude. \\This is also stated in Table \ref{tab:results}. It can be seen, that most of the buildup change happened in the classes $6\le$x$\leq$9 and higher for Ischia. This is also visible in \ref{fig:map_buildup_class}. The buildup areas of 2006 and 2018 are shown. For Ischia, a lot of  areas which are coloured depending on the $6\le$x$\leq$9 classification on higher were transformed to buildup areas in 2018. 
+\\\\
+The results we gained could be representing different influences on the islands: Like described in Section \ref{sec_I} and \ref{sec_L}, Ischia and Lesvos are influenced by different socio-economic factors. Ischia was in 2006 already quite densely, compared to Lesvos, buildup. The increase of 64.51\% in buildup area did mainly happen on gradient magnitude in the interval [7,25]. The areas which were builtup in-between 2006 and 2018 did therefore mainly happen in this gradient interval. In comparison, on Lesvos did the buildup area not significantly differ from the buildup area from before 2006.\\ Nevertheless,  areas in the higher slopes got more popular for buildup on Ischia. Reasons could be, that the more flat areas are already densely populated, that the new buildups are more regularly happening at more steep slopes. As described in \textbf{Add ref}, the buildup on Ischia is driven on touristic developement and a economic wealth growth since its located close to Naples. Also, the spatial planning framework legalizes unauthorized buildups, which could be a reason for a higher buildup rate.\\\\
+On the other side, Lesvos does not show that strong buildup rates in the time period of 2006 and 2018. Lesvos is, compared to Ischia, way further from the mainland of Greece and is harder to reach. This could be a reason for lower economic grow and tourism rates, as stated in \ref{sec_L}
+\\\\
+As described in \ref{sec_I}, 
+There could have several reasons: Ischia was 2006 already quite densely populated how Table \ref{tab:perc_buildup} and Figure \ref{fig:map_buildup_elevation} 
+\\
+
+
+
+
+
+
+
+\begin{figure*}
+\adjustbox{center}{
+\includegraphics[scale=0.6]{"plots/buildup_elevation_4d.png"}}
+\caption{Buildup area with elevation}
+\label{fig:map_buildup_elevation}
+\end{figure*}
+
+
+\begin{figure*}
+\adjustbox{center}{
+\includegraphics[scale=0.5]{"plots/buildup_scope_class_4d.png"}}
+\caption{Buildup area with slope classification}
+\label{fig:map_buildup_class}
+\end{figure*}
+
+
+
+
+\section{Conclusion}\label{Conclusion}
+In this essay the islands Ischia and Lesvos were compared, in order to examine how both differing physical conditions and planning law framework shape built-up patterns under unequal spatial scales, in the context of Mediterranean-insular conditions.\\\\
+Despite stricter national planning regulations in Greece which don’t allow a complete retroactive legalisation of unauthorized building as in Italy, dispersed development patterns persist in Lesvos due to its size and lower land pressure, while Ischia’s limited space has resulted in more intensive land use, including on steeper slopes and a vast reliance on unauthorized building construction.
+\\\\
+The data we collected and examined shows the differences of the buildup area of the Islands for different time periods. We assigned the buildup data to different slope magnitudes and classified them in different categories. The data showed, that the buildup are increased significantly on Ischia, while on Lesvos it barely changed. On Ischia, the majority of buildup in the examined time period happened on slopes between 7\% and 25\%.  We assume that the socio-economic and geographic factors are drivers for the increased development of buildup areas at steeper slopes. Vice versa, we explained the absence of a strong grow of buildup area on Lesvos with the relating socio-economic and geographic factors.\\\\
+Nevertheless, the research could not be representative because of different issues.\\
+The data we used for the buildup, see Section \ref{data}, is with a resolution of 20m and 10m quite imprecise. To detect every single buildup in the area a higher resolution is necessary. Also, the sampling between different resolution caused imprecision. By comparing the initial data, with which we computed the buildup area in Table \ref{tab:perc_buildup} with the data results of Table \ref{tab:results} and Figure \ref{fig:plots_buildup}, we calculated an error of 10\%. \\\\
+The island areas are different by factor ~35 and Ischia is, in contrast to Lesvos, incorporated in the metropolitan region of Naples. Therefore, comparing the buildup changes are not meaningful. \\A more valid measure could have been dividing the buildup area by inhabitants or area of the islands. This would have resulted in more comparable values.\\\\
+ Nevertheless, the buildup area relating to different physical conditions and socio-economic influences could be researched and the difference of the two islands over the time period of 2006 to 2018 presented. Even if the data and the selection of islands is not meaningful to make a representative statement, the differences of the islands could still be presented in a ways to describe the different buildup development of Ischia and Lesvos. 
+
+%%===========================================================================================%%
+%% If you are submitting to one of the Nature Portfolio journals, using the eJP submission   %%
+%% system, please include the references within the manuscript file itself. You may do this  %%
+%% by copying the reference list from your .bbl file, paste it into the main manuscript .tex %%
+%% file, and delete the associated \verb+\bibliography+ commands.                            %%
+%%===========================================================================================%%%#\bibliographystyle{plain}
+%\bibliography{sn-bibliography}% common bib file
+\newpage
+\onecolumn
+\printbibliography
+
+
+\end{document}
+
+%% if required, the content of .bbl file can be included here once bbl is generated
+%%\input sn-article.bbl
+
